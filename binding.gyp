@@ -57,14 +57,11 @@
         }],
         ['OS=="mac"', {
           "defines":[
-            "__MACOSX_CORE__","USE_IOKIT","USE_APPLICATION_SERVICES","USE_OBJC"
+            "__MACOSX_CORE__","USE_IOKIT","USE_COREFOUNDATION","USE_OBJC"
           ],
           "link_settings": {
             "libraries": [
               "-framework IOKit",
-              "-framework Carbon",
-              "-framework ApplicationServices",
-              "-framework AppKit",
               "-framework CoreFoundation"
             ],
           },

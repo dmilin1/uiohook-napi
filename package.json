@@ -1,32 +1,48 @@
 {
-  "name": "uiohook-napi",
-  "version": "1.2.0",
+  "_from": "uiohook-napi",
+  "_id": "uiohook-napi@1.0.8",
+  "_inBundle": false,
+  "_integrity": "sha512-kIydr9nz4CBkTh7t92L4xT9xrHBaGbSNAd3ZZUnBKvOcQvulW6XuUqFzmvHDIC+EkIjslADsmCgMPucKZQtMRw==",
+  "_location": "/uiohook-napi",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "uiohook-napi",
+    "name": "uiohook-napi",
+    "escapedName": "uiohook-napi",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/uiohook-napi/-/uiohook-napi-1.0.8.tgz",
+  "_shasum": "31cd346fdbc7d073c51f14b98c965f14643eb158",
+  "_spec": "uiohook-napi",
+  "_where": "C:\\Users\\Dimitrie\\Documents\\Dimitrie\\Experiments\\ControllerLab\\controller-lab",
   "author": {
     "name": "Alexander Drozdov"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SnosMe/uiohook-napi.git"
+  "bugs": {
+    "url": "https://github.com/SnosMe/uiohook-napi/issues"
   },
-  "license": "MIT",
-  "keywords": [
-    "iohook",
-    "uiohook",
-    "libuiohook",
-    "hook",
-    "input",
-    "keyboard",
-    "mouse"
-  ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "install": "node-gyp-build",
-    "prebuild": "prebuildify --napi",
-    "build-ts": "tsc",
-    "demo": "ts-node src/demo.ts",
-    "make-libuiohook-patch": "git -C ./libuiohook diff --cached > ./src/libuiohook.patch",
-    "apply-libuiohook-patch": "git -C ./libuiohook apply ../src/libuiohook.patch"
+  "bundleDependencies": false,
+  "dependencies": {
+    "node-gyp-build": "4.x.x"
+  },
+  "deprecated": false,
+  "description": "[![](https://img.shields.io/npm/v/uiohook-napi/latest?color=CC3534&label=uiohook-napi&logo=npm&labelColor=212121)](https://www.npmjs.com/package/uiohook-napi)",
+  "devDependencies": {
+    "@types/node": "14.x.x",
+    "prebuildify": "4.x.x",
+    "ts-node": "9.x.x",
+    "typescript": "4.x.x"
+  },
+  "engines": {
+    "node": ">= 12"
   },
   "files": [
     "dist",
@@ -36,20 +52,34 @@
     "src/lib",
     "prebuilds"
   ],
-  "devDependencies": {
-    "@types/node": "16.x.x",
-    "prebuildify": "5.x.x",
-    "ts-node": "10.x.x",
-    "typescript": "4.x.x"
-  },
-  "dependencies": {
-    "node-gyp-build": "4.x.x"
-  },
+  "gypfile": true,
+  "homepage": "https://github.com/SnosMe/uiohook-napi#readme",
+  "keywords": [
+    "iohook",
+    "uiohook",
+    "libuiohook",
+    "hook",
+    "input",
+    "keyboard",
+    "mouse"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "name": "uiohook-napi",
   "prebuild": {
     "test": "dist/prebuild-test-noop.js"
   },
-  "gypfile": true,
-  "engines": {
-    "node": ">= 16"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SnosMe/uiohook-napi.git"
+  },
+  "scripts": {
+    "apply-libuiohook-patch": "git -C ./libuiohook apply ../src/libuiohook.patch",
+    "build-ts": "tsc",
+    "install": "node-gyp-build",
+    "make-libuiohook-patch": "git -C ./libuiohook diff --cached > ./src/libuiohook.patch",
+    "prebuild": "prebuildify --napi"
+  },
+  "types": "dist/index.d.ts",
+  "version": "1.0.8"
 }
